@@ -921,7 +921,7 @@ class DocxTranslator(nodes.NodeVisitor):
 
         curloc = self.current_state.location
 
-        if 'List' in self.current_paragraph.style.name and not self.current_paragraph.text:
+        if not self.current_paragraph == None and 'List' in self.current_paragraph.style.name and not self.current_paragraph.text:
             print("HB VP List")
             # This is the first paragraph in a list item, so do not create another one.
             pass
